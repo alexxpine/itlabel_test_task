@@ -1,0 +1,200 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  position: relative;
+  background: #fff;
+  z-index: 10;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+
+  &_menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+  }
+
+  &-link {
+    position: relative;
+    color: $secondary;
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    &:hover {
+      color: $primary;
+      transition: $transition-time;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 30%;
+        bottom: -5px;
+        width: 40%;
+        height: 2px;
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.section {
+
+  margin-bottom: 90px;
+
+  &_welcome {
+    min-height: 600px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background: url("../img/slider-bg.png") 0 0 no-repeat;
+    background-size: cover;
+    margin-top: -100px;
+
+    .welcome_title {
+      font-size: 3em;
+      text-transform: uppercase;
+      color: #fff;
+      width: 50%;
+      margin-top: 60px;
+      padding: 55px 0;
+    }
+  }
+
+  &_features {
+
+    &_title {
+      font-size: 2em;
+      text-transform: uppercase;
+      color: $primary;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .features_wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+ 
+    .features_link {
+      display: block;
+      text-decoration: none;
+      width: 48%;
+
+      &:hover {
+        .features_card_image {
+          opacity: .5;
+          transition: $transition-time;
+        }
+      }
+    }
+
+    .features_card {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      box-shadow: 5px 0 15px #cac9c9;
+      border-radius: $border-radius;
+      margin: 1em .5em;
+      background-color: $primary;
+
+      &_image {
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius 0 0 $border-radius;
+      }
+
+      &_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 40px;
+        background-color: #fff;
+        border-radius: 0 $border-radius $border-radius 0;
+      }
+
+      &_title {
+        font-size: 1.5em;
+        color: $secondary;
+        text-transform: uppercase;
+        margin: 1em 0;
+      }
+
+      &_text {
+        font-size: 1em;
+        color: $secondary;
+      }
+
+      &_info {
+        font-size: 0.9em;
+        color: $info;
+      }
+    }
+  }
+
+  &_about_us {
+    height: 800px;
+    background: #fff url("../img/lotos-decoration.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    &_title {
+      font-size: 3em;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      background-color: $section;
+      padding: 50px 0;
+      margin: 0;
+    }
+
+    .about_us_content {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      align-items: center;
+      margin: 150px 0;
+    }
+
+    .about_us_description {
+      width: 50%;
+    }
+
+    .about_us_text {
+      box-sizing: border-box;
+      color: $secondary;
+      padding: 0 30px;
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}

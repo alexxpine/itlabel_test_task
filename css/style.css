@@ -1,0 +1,144 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0; }
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.header {
+  position: relative;
+  background: #fff;
+  z-index: 10; }
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center; }
+  .navigation_menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0; }
+  .navigation-link {
+    position: relative;
+    color: #777777;
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 1em;
+    padding-right: 1em; }
+    .navigation-link:hover {
+      color: #5b6ceb;
+      transition: 0.2s; }
+      .navigation-link:hover::after {
+        content: "";
+        position: absolute;
+        left: 30%;
+        bottom: -5px;
+        width: 40%;
+        height: 2px;
+        background-color: #5b6ceb; }
+
+.section {
+  margin-bottom: 90px; }
+  .section_welcome {
+    min-height: 600px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background: url("../img/slider-bg.png") 0 0 no-repeat;
+    background-size: cover;
+    margin-top: -100px; }
+    .section_welcome .welcome_title {
+      font-size: 3em;
+      text-transform: uppercase;
+      color: #fff;
+      width: 50%;
+      margin-top: 60px;
+      padding: 55px 0; }
+  .section_features_title {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #5b6ceb;
+    text-align: center;
+    margin-bottom: 80px; }
+  .section_features .features_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .section_features .features_link {
+    display: block;
+    text-decoration: none;
+    width: 48%; }
+    .section_features .features_link:hover .features_card_image {
+      opacity: .5;
+      transition: 0.2s; }
+  .section_features .features_card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 5px 0 15px #cac9c9;
+    border-radius: 7px;
+    margin: 1em .5em;
+    background-color: #5b6ceb; }
+    .section_features .features_card_image {
+      width: 100%;
+      height: auto;
+      border-radius: 7px 0 0 7px; }
+    .section_features .features_card_description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 40px;
+      background-color: #fff;
+      border-radius: 0 7px 7px 0; }
+    .section_features .features_card_title {
+      font-size: 1.5em;
+      color: #777777;
+      text-transform: uppercase;
+      margin: 1em 0; }
+    .section_features .features_card_text {
+      font-size: 1em;
+      color: #777777; }
+    .section_features .features_card_info {
+      font-size: 0.9em;
+      color: #999999; }
+  .section_about_us {
+    height: 800px;
+    background: #fff url("../img/lotos-decoration.png");
+    background-position: bottom right;
+    background-repeat: no-repeat; }
+    .section_about_us_title {
+      font-size: 3em;
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      background-color: #6b79e2;
+      padding: 50px 0;
+      margin: 0; }
+    .section_about_us .about_us_content {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      align-items: center;
+      margin: 150px 0; }
+    .section_about_us .about_us_description {
+      width: 50%; }
+    .section_about_us .about_us_text {
+      box-sizing: border-box;
+      color: #777777;
+      padding: 0 30px;
+      width: 80%; }
+
+@media (max-width: 768px) {
+  .header {
+    display: none; } }
