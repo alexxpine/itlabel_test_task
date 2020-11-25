@@ -75,7 +75,7 @@ body {
 
     .welcome_title {
       font-size: 3em;
-      text-transform: uppercase;
+      text-transform: $title_text_style;
       color: #fff;
       width: 50%;
       margin-top: 60px;
@@ -87,7 +87,7 @@ body {
 
     &_title {
       font-size: 2em;
-      text-transform: uppercase;
+      text-transform: $title_text_style;
       color: $primary;
       text-align: center;
       margin-bottom: 80px;
@@ -140,7 +140,7 @@ body {
       &_title {
         font-size: 1.5em;
         color: $secondary;
-        text-transform: uppercase;
+        text-transform: $title_text_style;
         margin: 1em 0;
       }
 
@@ -164,7 +164,7 @@ body {
 
     &_title {
       font-size: 3em;
-      text-transform: uppercase;
+      text-transform: $title_text_style;
       color: #fff;
       text-align: center;
       background-color: $section;
@@ -181,7 +181,7 @@ body {
     }
 
     .about_us_description {
-      width: 50%;
+      width: 48%;
     }
 
     .about_us_text {
@@ -190,6 +190,208 @@ body {
       padding: 0 30px;
       width: 80%;
     }
+
+    .about_us_slider_wrap {
+      position: relative;
+      width: 48%;
+
+      .slider_arrows {
+        list-style: none;
+
+        .arrow-icon {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding: calc(50% - 9.5px) 0;
+        }
+      }
+
+      .arrow_prev,
+      .arrow_next {
+        position: absolute;
+        top: calc(50% - 25px);
+        background-color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        z-index: 10;
+      }
+
+      .arrow_prev {
+        left: -10px;
+      }
+
+      .arrow_next {
+        right: -10px;
+      }
+
+      .arrow_next:hover,
+      .arrow_prev:hover {
+        cursor: pointer;
+      }
+
+      .slider_item {
+        outline: none;
+      }
+
+      .slick-slide img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $primary;
+  color: #fff;
+
+  &_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 60px 0;
+  }
+
+  &_about_title,
+  &_contact_us_title {
+    text-transform: $title_text_style;
+    font-size: 1.25em;
+  }
+
+  &_about_text {
+    font-weight: 300;
+  }
+
+  &_about {
+    width: 45%;
+  }
+
+  &_contact_us {
+    width: 45%;
+
+    &_contacts {
+      display: flex;
+      flex-wrap: wrap;
+
+      .contact {
+        position: relative;
+        font-weight: 300;
+        width: 40%;
+        margin-bottom: 25px;
+      }
+
+      .address,
+      .email,
+      .phone,
+      .website {
+        display: inline-block;
+        margin-left: 35px;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .address {
+        &::before {
+          content: url('../img/placeholder-icon.png');
+        }
+      }
+
+      .email {
+        &::before {
+          content: url('../img/envelope-icon.png');
+        }
+      }
+
+      .phone {
+        &::before {
+          content: url('../img/phone-call-icon.png');
+        }
+      }
+
+      .website {
+        &::before {
+          content: url('../img/planet-earth-icon.png');
+        }
+      }
+
+    }
+  }
+
+  &_socials {
+    width: 50%;
+
+    .socials {
+
+      &_menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      &_item {
+        position: relative;
+        width: 40px;
+
+        .pinterest,
+        .twitter,
+        .facebook,
+        .google_plus,
+        .instagram {
+          display: inline-block;
+  
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        .pinterest {
+          &::before {
+            content: url('../img/pinterest-icon.png');
+          }
+        }
+
+        .twitter {
+          &::before {
+            content: url('../img/twitter-icon.png');
+          }
+        }
+
+        .facebook {
+          &::before {
+            content: url('../img/facebook-icon.png');
+          }
+        }
+
+        .google_plus {
+          &::before {
+            content: url('../img/google-plus-icon.png');
+          }
+        }
+
+        .instagram {
+          &::before {
+            content: url('../img/instagram-icon.png');
+          }
+        }
+      }
+    }
+  }
+
+  .copyright_info {
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: center;
+    background-color: $menu;
+    padding: 25px 0;
   }
 }
 
